@@ -1,0 +1,15 @@
+C:\Users\jake_\source\repos\Jjones32\Personal-Projects\MovieDatabase\MovieDatabase\bin\Debug\net6.0\MovieDatabase.exe
+C:\Users\jake_\source\repos\Jjones32\Personal-Projects\MovieDatabase\MovieDatabase\bin\Debug\net6.0\MovieDatabase.deps.json
+C:\Users\jake_\source\repos\Jjones32\Personal-Projects\MovieDatabase\MovieDatabase\bin\Debug\net6.0\MovieDatabase.runtimeconfig.json
+C:\Users\jake_\source\repos\Jjones32\Personal-Projects\MovieDatabase\MovieDatabase\bin\Debug\net6.0\MovieDatabase.dll
+C:\Users\jake_\source\repos\Jjones32\Personal-Projects\MovieDatabase\MovieDatabase\bin\Debug\net6.0\MovieDatabase.pdb
+C:\Users\jake_\source\repos\Jjones32\Personal-Projects\MovieDatabase\MovieDatabase\obj\Debug\net6.0\MovieDatabase.csproj.AssemblyReference.cache
+C:\Users\jake_\source\repos\Jjones32\Personal-Projects\MovieDatabase\MovieDatabase\obj\Debug\net6.0\MovieDatabase.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jake_\source\repos\Jjones32\Personal-Projects\MovieDatabase\MovieDatabase\obj\Debug\net6.0\MovieDatabase.AssemblyInfoInputs.cache
+C:\Users\jake_\source\repos\Jjones32\Personal-Projects\MovieDatabase\MovieDatabase\obj\Debug\net6.0\MovieDatabase.AssemblyInfo.cs
+C:\Users\jake_\source\repos\Jjones32\Personal-Projects\MovieDatabase\MovieDatabase\obj\Debug\net6.0\MovieDatabase.csproj.CoreCompileInputs.cache
+C:\Users\jake_\source\repos\Jjones32\Personal-Projects\MovieDatabase\MovieDatabase\obj\Debug\net6.0\MovieDatabase.dll
+C:\Users\jake_\source\repos\Jjones32\Personal-Projects\MovieDatabase\MovieDatabase\obj\Debug\net6.0\refint\MovieDatabase.dll
+C:\Users\jake_\source\repos\Jjones32\Personal-Projects\MovieDatabase\MovieDatabase\obj\Debug\net6.0\MovieDatabase.pdb
+C:\Users\jake_\source\repos\Jjones32\Personal-Projects\MovieDatabase\MovieDatabase\obj\Debug\net6.0\MovieDatabase.genruntimeconfig.cache
+C:\Users\jake_\source\repos\Jjones32\Personal-Projects\MovieDatabase\MovieDatabase\obj\Debug\net6.0\ref\MovieDatabase.dll
