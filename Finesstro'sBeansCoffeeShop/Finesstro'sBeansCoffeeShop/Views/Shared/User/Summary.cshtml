@@ -1,0 +1,16 @@
+﻿@model User
+
+<div class="row">
+    <div class="col-4"></div>
+    <div class="col-4">
+        <h1>Welcome @Model.FirstName @Model.LastName!</h1>
+        <h2>
+            @Html.DisplayNameFor(model => model.IsPremiumMember)
+        </h2>
+        @if (Model.IsPremiumMember)
+        {
+            <h2>There is a new special on Sumatran blends!</h2>
+        }
+    </div>
+    <div class="col-4"></div>
+</div>
