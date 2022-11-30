@@ -1,0 +1,241 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;  
+  }
+  html{
+      scroll-behavior: smooth;
+  }
+  
+  /* Navbar */
+  .navbar{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: rgba(0,0,0,0.8);
+      position:sticky;
+      top: 0;
+  }
+  .navbar ul{
+      display: flex;
+      list-style: none;
+      margin: 20px 0px;
+  }
+  .navbar ul li{
+      font-family: century;
+      font-size: 1.1rem;
+      font-weight: bold;
+  }
+  .navbar ul li a {
+      text-decoration: none;
+      color: wheat;
+      padding: 8px 25px;
+      transition: all .5s ease; 
+  }
+  .navbar ul li a:hover{
+      background-color: white;
+      color: black;
+      box-shadow: 0 0 10px white;
+  }
+  
+  /* Home */
+  
+  #home{
+      display: flex;
+      flex-direction: column;
+      background-color: rgba(0,0,0,0.8);
+      height: 840px;
+      justify-content: center;
+      align-items: center;
+      color:  wheat;
+  }
+  #home::before{
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      background: url(media/Shed3.JPG) no-repeat center center/cover;
+      height: 900px;
+      width: 100%;
+      z-index: -1;
+      opacity: .8;
+  }
+  .main{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: absolute;
+      top: 30%;
+      right: 10%;
+  }
+  .headings{
+      font-family: century;
+      font-size: 3rem;
+      text-align: center;
+      margin: 40px 0px;
+  }
+  .btn{
+      padding: 10px 35px;
+      background-color: transparent;
+      border: 1px solid white;
+      color: white;
+      outline: none;
+      transition: .6s ease;
+  }
+  .btn:hover{
+      cursor: pointer;
+      background-color: white;
+      color: black;
+      box-shadow: 0 0 5px white, 0 0 10px white, 0 0 15px white;
+      font-weight: bold;
+  }
+  
+  /* About */
+  #about{
+      display: flex;
+      flex-direction: column;
+      background-color: rgba(0,0,0,0.7);
+      color: wheat;
+  }
+  #pic{
+      display: flex;
+  }
+  #pic img{
+      width: 500px;
+      height: 400px;
+  }
+  #intro{
+      display: flex;
+      flex-direction: column;
+      text-align: start;
+      padding: 10px;
+  }
+  #intro h2{
+      font-size: 2rem;
+      margin-bottom: 20px;
+  }
+  
+  /* Portfolio */
+  #portfolio{
+      display: flex;
+      flex-direction: column;
+      background-color: rgba(0,0,0,0.8);
+      color: wheat;
+  }
+  .gallery{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      box-sizing: border-box;
+      align-items: center;
+      padding: 20px;
+  }
+  .btn{
+      padding: 10px 35px;
+      background-color: transparent;
+      border: 1px solid white;
+      color: white;
+      outline: none;
+      transition: .6s ease;   
+  }
+  .box:hover{
+      cursor: pointer;
+      background-color: white;
+      color: black;
+      box-shadow: 0 0 5px white, 0 0 10px white, 0 0 15px white;
+      font-weight: bold;   
+  }
+  .gallery img{
+      width: 240px;
+      height: 240px;
+      margin: 10px;
+  }
+  /* Services */
+  #services{
+      display: flex;
+      flex-direction: column;
+      background-color: rgba(0,0,0,0.7);
+      color: wheat;
+      padding: 20px;
+  }
+  .row{
+      display: flex;
+  }
+  .box{
+      display: flex;
+      flex-direction: coulumn;
+      width: 400px;
+      height: 450px;
+      border: 1px solid black;
+      margin: 40px;
+      align-items: center;
+      text-align: justify;
+      padding: 15px;
+      border-radius: 20px;
+      background: linear-gradient(to top, rgb(0, 137, 91) 50%, rgb(255, 157, 0));
+      background-size: 100% 200%;
+      transition: all .8s;
+  }
+  .box:hover{
+      background-position: center;
+      color: rgba(0,0,0,0.8);
+      border: none;
+      border: none;
+      box-shadow:0 0 40px rgb(0, 137, 91);
+  }
+  
+  /* Contact */
+  #contact{
+      display: flex;
+      flex-direction: column;
+      box-sizing: border-box;
+      background-color: rgba(0,0,0,0.8);
+      color: wheat;
+      padding: 20px;
+  }
+  .form{
+      display:flex;
+      flex-direction: column;
+      background-color: rgba(0,0,0,0.7);
+      color: wheat;
+      box-sizing: border-box;
+      align-items: center;
+      margin: 20px 0px;
+  }
+  .input{
+      padding: 12px;
+      background-color: rgba(0,0,0,0.7);
+      color: wheat;
+      margin: 15px;
+      width: 30%;
+      border: none;
+      outline: none;
+  }
+  #msg{
+      width: 30%;
+      background-color: rgba(0,0,0,0.7);
+      color: wheat;
+      padding: 10px;
+      margin: 15px;
+      border: none;
+      outline: none;
+  }
+  #send{   
+      font-family: century;
+      font-size: 1rem;
+      text-align: center;
+      margin: 40px 0px;
+      padding: 10px 35px;
+      background-color: transparent;
+      border: 1px solid white;
+      color: white;
+      outline: none;
+      transition: .6s ease;
+  }
+  #send:hover{
+      cursor:pointer;
+      background-color: white;
+      color: black;
+      box-shadow: 0 0 5px white, 0 0 10px white, 0 0 15px white;
+      font-weight: bold;
+  }
