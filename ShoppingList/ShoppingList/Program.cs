@@ -44,7 +44,7 @@ do
     if (!storeItems.ContainsKey(userInput))
     {
         //Continue the loop with a message
-        Console.WriteLine("So sorry, we don't have that. Clearly you need to a look at our offerings again.");
+        Console.WriteLine("So sorry, we don't have that. Please look at our offerings one more time and choose from there.");
         continue;
     }
     //my happy case
