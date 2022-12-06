@@ -9,15 +9,15 @@ namespace CRUDWork.Controllers
     [ApiController]
     public class SuperHeroController : ControllerBase
     {
-        private static List<SuperHero> heroes = new List<SuperHero>
+      /*  private static List<SuperHero> heroes = new List<SuperHero>
             {
-                new SuperHero
-                {   Id = 1,
-                    HeroName = "Spider Man",
-                    FirstName = "Peter",
-                    LastName = "Parker",
-                    Hometown = "New York City, NY"
-                },
+                //new SuperHero
+                //{   Id = 1,
+                    //HeroName = "Spider Man",
+                    //FirstName = "Peter",
+                    //LastName = "Parker",
+                    //Hometown = "New York City, NY"
+                //},
                 new SuperHero
                 {   Id = 2,
                     HeroName = "IronMan",
@@ -25,25 +25,27 @@ namespace CRUDWork.Controllers
                     LastName = "Stark",
                     Hometown = "Long Island, NY"
                 }
-            };
+            };*/
+
+        private readonly DataContext _context;
+
+        public SuperHeroController(DataContext dataContext)
+        {
+            _context = dataContext;
+        }
+
         [HttpGet]
         public async Task<ActionResult<List<SuperHero>>> GetAllHeroes()
         {
-            return Ok(heroes);
+            return Ok(await _context.SuperHeroes.ToListAsync());
         }
 
-        [HttpPost]
-        public async Task<ActionResult<List<SuperHero>>> AddHero(SuperHero hero)
-        {
-            heroes.Add(hero);
-            return Ok(heroes);
-        }
 
         [HttpGet("{id}")]
         public async Task<ActionResult<List<SuperHero>>> GetHero(int id)
         {
             //var hero = heroes[id];
-            var hero = heroes.Find(h => h.Id == id);
+            var hero = await _context.SuperHeroes.FindAsync(id);
             if (hero == null)
             {
                 return BadRequest("Hero Not Found.");
@@ -51,31 +53,50 @@ namespace CRUDWork.Controllers
             return Ok(hero);
         }
 
+
+        [HttpPost]
+        public async Task<ActionResult<List<SuperHero>>> AddHero(SuperHero hero)
+        {
+            _context.SuperHeroes.Add(hero);
+            await _context.SaveChangesAsync();
+
+            return Ok(await _context.SuperHeroes.ToListAsync());
+        }
+
+
+
         [HttpPut]
         public async Task<ActionResult<List<SuperHero>>> UpdateHero(SuperHero request)
         {
-            var hero = heroes.Find(h => h.Id == request.Id);
-            if (hero == null)            
+            var dbhero = await _context.SuperHeroes.FindAsync(request.Id);
+            if (dbhero == null)
+            {
                 return BadRequest("Hero Not Found.");
+            }
 
-            hero.HeroName= request.HeroName;
-            hero.FirstName= request.FirstName;
-            hero.LastName= request.LastName;
-            hero.Hometown= request.Hometown;
+            dbhero.HeroName= request.HeroName;
+            dbhero.FirstName= request.FirstName;
+            dbhero.LastName= request.LastName;
+            dbhero.Hometown= request.Hometown;
+
+            await _context.SaveChangesAsync();
             
-            return Ok(heroes);
+            return Ok(await _context.SuperHeroes.ToListAsync());
         }
 
         [HttpDelete("{id}")]
         public async Task<ActionResult<List<SuperHero>>> DeleteHero(int id)
         {
             //var hero = heroes[id];
-            var hero = heroes.Find(h => h.Id == id);
-            if (hero == null)
+            var dbhero = await _context.SuperHeroes.FindAsync(id);
+            if (dbhero == null)
+            {
                 return BadRequest("Hero Not Found.");
+            };
             
-            heroes.Remove(hero);
-            return Ok(heroes);
+            _context.SuperHeroes.Remove(dbhero);
+            await _context.SaveChangesAsync();
+            return Ok(await _context.SuperHeroes.ToListAsync());
         }
     }
 }
