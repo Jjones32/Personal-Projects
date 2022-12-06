@@ -1,0 +1,12 @@
+C:\Users\jake_\source\repos\Jjones32\Personal-Projects\ClarityEmailApp\ClarityEmailDLL\bin\Debug\net6.0\ClarityEmailDLL.deps.json
+C:\Users\jake_\source\repos\Jjones32\Personal-Projects\ClarityEmailApp\ClarityEmailDLL\bin\Debug\net6.0\ClarityEmailDLL.dll
+C:\Users\jake_\source\repos\Jjones32\Personal-Projects\ClarityEmailApp\ClarityEmailDLL\bin\Debug\net6.0\ClarityEmailDLL.pdb
+C:\Users\jake_\source\repos\Jjones32\Personal-Projects\ClarityEmailApp\ClarityEmailDLL\obj\Debug\net6.0\ClarityEmailDLL.csproj.AssemblyReference.cache
+C:\Users\jake_\source\repos\Jjones32\Personal-Projects\ClarityEmailApp\ClarityEmailDLL\obj\Debug\net6.0\ClarityEmailDLL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jake_\source\repos\Jjones32\Personal-Projects\ClarityEmailApp\ClarityEmailDLL\obj\Debug\net6.0\ClarityEmailDLL.AssemblyInfoInputs.cache
+C:\Users\jake_\source\repos\Jjones32\Personal-Projects\ClarityEmailApp\ClarityEmailDLL\obj\Debug\net6.0\ClarityEmailDLL.AssemblyInfo.cs
+C:\Users\jake_\source\repos\Jjones32\Personal-Projects\ClarityEmailApp\ClarityEmailDLL\obj\Debug\net6.0\ClarityEmailDLL.csproj.CoreCompileInputs.cache
+C:\Users\jake_\source\repos\Jjones32\Personal-Projects\ClarityEmailApp\ClarityEmailDLL\obj\Debug\net6.0\ClarityEmailDLL.dll
+C:\Users\jake_\source\repos\Jjones32\Personal-Projects\ClarityEmailApp\ClarityEmailDLL\obj\Debug\net6.0\refint\ClarityEmailDLL.dll
+C:\Users\jake_\source\repos\Jjones32\Personal-Projects\ClarityEmailApp\ClarityEmailDLL\obj\Debug\net6.0\ClarityEmailDLL.pdb
+C:\Users\jake_\source\repos\Jjones32\Personal-Projects\ClarityEmailApp\ClarityEmailDLL\obj\Debug\net6.0\ref\ClarityEmailDLL.dll
