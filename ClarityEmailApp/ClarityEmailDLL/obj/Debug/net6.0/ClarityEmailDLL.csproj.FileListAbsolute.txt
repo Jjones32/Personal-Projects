@@ -10,3 +10,5 @@ C:\Users\jake_\source\repos\Jjones32\Personal-Projects\ClarityEmailApp\ClarityEm
 C:\Users\jake_\source\repos\Jjones32\Personal-Projects\ClarityEmailApp\ClarityEmailDLL\obj\Debug\net6.0\refint\ClarityEmailDLL.dll
 C:\Users\jake_\source\repos\Jjones32\Personal-Projects\ClarityEmailApp\ClarityEmailDLL\obj\Debug\net6.0\ClarityEmailDLL.pdb
 C:\Users\jake_\source\repos\Jjones32\Personal-Projects\ClarityEmailApp\ClarityEmailDLL\obj\Debug\net6.0\ref\ClarityEmailDLL.dll
+C:\Users\jake_\source\repos\Jjones32\Personal-Projects\ClarityEmailApp\ClarityEmailDLL\bin\Debug\net6.0\ClarityEmailDLL.runtimeconfig.json
+C:\Users\jake_\source\repos\Jjones32\Personal-Projects\ClarityEmailApp\ClarityEmailDLL\obj\Debug\net6.0\ClarityEmailDLL.genruntimeconfig.cache

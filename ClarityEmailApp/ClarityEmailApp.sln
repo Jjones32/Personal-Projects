@@ -3,9 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33122.133
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClarityEmailApp", "ClarityEmailApp\ClarityEmailApp.csproj", "{17AD7889-EE21-4606-8845-047339613373}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClarityEmailDLL", "ClarityEmailDLL\ClarityEmailDLL.csproj", "{01DE781D-BE46-4644-BAB1-6C7A2B877633}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClarityEmailApp", "ClarityEmailApp\ClarityEmailApp.csproj", "{17AD7889-EE21-4606-8845-047339613373}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +15,6 @@ Global
 		{17AD7889-EE21-4606-8845-047339613373}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{17AD7889-EE21-4606-8845-047339613373}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{17AD7889-EE21-4606-8845-047339613373}.Release|Any CPU.Build.0 = Release|Any CPU
-		{01DE781D-BE46-4644-BAB1-6C7A2B877633}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{01DE781D-BE46-4644-BAB1-6C7A2B877633}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{01DE781D-BE46-4644-BAB1-6C7A2B877633}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{01DE781D-BE46-4644-BAB1-6C7A2B877633}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

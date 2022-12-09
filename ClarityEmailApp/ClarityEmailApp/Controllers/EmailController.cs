@@ -1,7 +1,11 @@
-﻿using ClarityEmailDLL.Services;
+﻿using ClarityEmailApp.Services;
 using Microsoft.AspNetCore.Mvc;
-using ClarityEmailDLL.Models;
-
+using ClarityEmailApp.Models;
+using ClarityEmailApp.Services.EmailService;
+using Microsoft.EntityFrameworkCore;
+using ClarityEmailApp.Data;
+using MimeKit;
+using MailKit.Net.Smtp;
 
 namespace ClarityEmailApp.Controllers
 {
@@ -9,19 +13,64 @@ namespace ClarityEmailApp.Controllers
     [ApiController]
     public class EmailController : ControllerBase
     {
-        private readonly ClarityEmailDLL.Services.EmailService.IEmailService _emailService;
-
-        public EmailController(ClarityEmailDLL.Services.EmailService.IEmailService emailService)
+        private readonly IEmailService _emailService;
+        private readonly EmailDbContext _context;
+        public EmailController(IEmailService emailService, ILogger<EmailController> logger, EmailDbContext context)
         {
-            _emailService= emailService;
+   
+            _emailService=emailService;
+            _context= context;
         }
 
-        [HttpPost]
-        public IActionResult SendEmail(EmailDto request)
+/*        public IActionResult GetEmailList()
         {
-            _emailService.SendEmail(request: request);
+            var eList = _context.Emails.ToList();
+            var viewModel = new EmailList();
+            return Ok(viewModel);
+        }
 
-            return Ok();
+        [HttpGet]
+        public async Task<IActionResult> Sent(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+            
+            var email = await _context.Emails.FirstOrDefaultAsync(m=> m.Id == id);
+            if (email == null)
+            {
+                return NotFound();
+            }
+            return Ok(email);
+        }
+*/
+        [HttpPost("Send")]
+        public async Task<IActionResult> SendEmail(Email request)
+        {
+            var email = new MimeMessage();
+            email.From.Add(MailboxAddress.Parse(request.Sender));
+            email.To.Add(MailboxAddress.Parse(request.Recipient));
+            email.Subject= request.Subject;
+            email.Body = new TextPart(MimeKit.Text.TextFormat.Html) { Text= request.Body }; 
+            
+            using var smtp = new SmtpClient();
+            smtp.Connect("smtp.ethereal.email", 587, MailKit.Security.SecureSocketOptions.StartTls);
+            smtp.Authenticate("estevan40@ethereal.email", "p3DArGMUNn5H6HaNGf");
+            smtp.Send(email);
+            smtp.Disconnect(true);
+            
+
+            if (ModelState.IsValid)
+            {
+                _context.Add(request);
+                await _context.SaveChangesAsync();
+                return Ok(request);
+            }
+
+            _emailService.SendEmail(request);
+
+            return Ok(request);
         }
     }
 }
