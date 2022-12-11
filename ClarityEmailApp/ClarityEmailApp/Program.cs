@@ -1,7 +1,10 @@
 global using ClarityEmailApp.Models;
 global using ClarityEmailApp.Services.EmailService;
 using ClarityEmailApp.Data;
+using FluentEmail.Smtp;
+using MailKit.Net.Smtp;
 using Microsoft.EntityFrameworkCore;
+using System.Net.Mail;
 
 internal class Program
 {
@@ -16,6 +19,7 @@ internal class Program
         builder.Services.AddSwaggerGen();
         builder.Services.AddScoped<IEmailService, EmailService>();
         builder.Services.AddDbContext<EmailDbContext>(x => x.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
+
 /*
         Console.WriteLine("Connection established");
         //Create
