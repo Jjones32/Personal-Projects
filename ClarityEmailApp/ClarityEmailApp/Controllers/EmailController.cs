@@ -6,6 +6,8 @@ using Microsoft.EntityFrameworkCore;
 using ClarityEmailApp.Data;
 using MimeKit;
 using MailKit.Net.Smtp;
+using System.Data;
+using SQLitePCL;
 
 namespace ClarityEmailApp.Controllers
 {
@@ -22,29 +24,16 @@ namespace ClarityEmailApp.Controllers
             _context= context;
         }
 
-/*        public IActionResult GetEmailList()
+
+        [HttpGet("Sent")]
+        public async Task<IActionResult> GetAllEmails() 
         {
-            var eList = _context.Emails.ToList();
-            var viewModel = new EmailList();
-            return Ok(viewModel);
+            var emails = await _emailService.GetAllEmailsAsync();
+            return Ok(emails);
         }
 
-        [HttpGet]
-        public async Task<IActionResult> Sent(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
-            
-            var email = await _context.Emails.FirstOrDefaultAsync(m=> m.Id == id);
-            if (email == null)
-            {
-                return NotFound();
-            }
-            return Ok(email);
-        }
-*/
+
+
         [HttpPost("Send")]
         public async Task<IActionResult> SendEmail(Email request)
         {

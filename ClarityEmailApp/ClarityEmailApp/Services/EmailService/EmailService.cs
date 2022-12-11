@@ -2,15 +2,37 @@
 using MimeKit.Text;
 using MimeKit;
 using MailKit.Net.Smtp;
+using ClarityEmailApp.Data;
+using Org.BouncyCastle.Asn1.IsisMtt.X509;
+using ClarityEmailApp.Migrations;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Mvc;
 
 namespace ClarityEmailApp.Services.EmailService
 {
     public class EmailService : IEmailService
     {
         private readonly IConfiguration _config;
-        public EmailService(IConfiguration config)
+        private readonly EmailDbContext _context;
+        public EmailService(IConfiguration config, EmailDbContext context)
         {
             _config = config;
+            _context = context;
+        }
+
+        public async Task<List<Email>> GetAllEmailsAsync()
+        {
+            var allEmails = await _context.Emails.Select(x=> new Email()
+            {
+                Id= x.Id,
+                Sender= x.Sender,
+                Recipient= x.Recipient,
+                Subject= x.Subject, 
+                Body= x.Body,
+                Date= x.Date
+            }).ToListAsync();
+
+            return allEmails;
         }
 
         public void SendEmail(Email request)

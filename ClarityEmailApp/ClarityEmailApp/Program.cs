@@ -3,34 +3,54 @@ global using ClarityEmailApp.Services.EmailService;
 using ClarityEmailApp.Data;
 using Microsoft.EntityFrameworkCore;
 
-
-var builder = WebApplication.CreateBuilder(args);
-
-// Add services to the container.
-builder.Services.AddControllers();
-
-//DependencyInjection
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
-builder.Services.AddScoped<IEmailService, EmailService>();
-builder.Services.AddDbContext<EmailDbContext>(x => x.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
-
-var app = builder.Build();
-
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
+internal class Program
 {
-    app.UseSwagger();
-    app.UseSwaggerUI();
+    private static void Main(string[] args)
+    {
+        var builder = WebApplication.CreateBuilder(args);
+
+        // Add services to the container
+        // DependencyInjection
+        builder.Services.AddControllers();
+        builder.Services.AddEndpointsApiExplorer();
+        builder.Services.AddSwaggerGen();
+        builder.Services.AddScoped<IEmailService, EmailService>();
+        builder.Services.AddDbContext<EmailDbContext>(x => x.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
+/*
+        Console.WriteLine("Connection established");
+        //Create
+        Console.WriteLine("Enter Sender Email Address");
+        string sender = Console.ReadLine();
+
+        Console.WriteLine("Enter Recipient Email Address");
+        string recipient = Console.ReadLine();
+
+        Console.WriteLine("Enter Subject:");
+        string subject = Console.ReadLine();
+
+        Console.WriteLine("Enter Body:");
+        string body = Console.ReadLine();*/
+
+
+
+        var app = builder.Build();
+
+        // Configure the HTTP request pipeline.
+        if (app.Environment.IsDevelopment())
+        {
+            app.UseSwagger();
+            app.UseSwaggerUI();
+        }
+
+        app.UseHttpsRedirection();
+
+        app.UseAuthorization();
+
+        app.MapControllers();
+
+        app.Run();
+    }
 }
-
-app.UseHttpsRedirection();
-
-app.UseAuthorization();
-
-app.MapControllers();
-
-app.Run();
 
 
 
