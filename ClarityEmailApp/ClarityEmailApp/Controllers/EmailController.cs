@@ -1,14 +1,7 @@
-﻿using ClarityEmailApp.Services;
-using Microsoft.AspNetCore.Mvc;
-using ClarityEmailApp.Models;
-using ClarityEmailApp.Services.EmailService;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Mvc;
 using ClarityEmailApp.Data;
 using MimeKit;
 using MailKit.Net.Smtp;
-using System.Data;
-using SQLitePCL;
-using Polly;
 
 namespace ClarityEmailApp.Controllers
 {
