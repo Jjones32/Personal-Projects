@@ -1,0 +1,138 @@
+﻿@model Email
+@{
+    ViewData["Title"] = "Send Email";
+}
+
+
+    <h1 class="display-4">Send Email</h1>
+
+@using (Html.BeginForm())
+{
+<div class="row">
+    <div class="col-md-6">
+        <form class="row g-3">
+            <div class="col-md-6">
+                <label asp-for="Sender" class="form-label">From:</label>
+                <input type="email" class="form-control" id="inputEmail4">
+            </div>
+            <div class="col-md-6">
+                <label asp-for="Recipient" class="form-label">To:</label>
+                <input type="email" class="form-control" id="inputPassword4">
+            </div>
+            <div class="col-12">
+                <label asp-for="Subject" class="form-label">Subject:</label>
+                <input type="text" class="form-control" id="inputSubject" placeholder="ex. Project Completed On Time.">
+            </div>
+            <div class="mb-3">
+                <label asp-for="Body" class="form-label">Body</label>
+                <textarea class="form-control" id="Body" rows="3"></textarea>
+            </div>
+            <div class="col-12">
+                <button type="submit" class="btn btn-primary" value="Submit">Send</button>
+            </div>
+            </form>
+    </div>
+</div>    
+}
+
+
+
+
+
+
+
+
+
+
+
+@*
+<form asp-action="Create">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <div class="form-group">
+        <label asp-for="From" class="control-label"></label>
+        <input asp-for="From" class="form-control" />
+        <span asp-validation-for="From" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="To" class="control-label"></label>
+        <input asp-for="To" class="form-control" />
+        <span asp-validation-for="To" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Subject" class="control-label"></label>
+        <input asp-for="Subject" class="form-control" />
+        <span asp-validation-for="Subject" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Body" class="form-label">Body</label>
+        <input asp-for="Body" class="form-control" />
+        <textarea class="form-control" id="Body" rows="3"></textarea>
+    </div>
+
+</form>*@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@*    <div class="container">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Id)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.From)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.To)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Subject)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Body)
+                    </th>
+                </tr>
+            </thead>
+
+    </div>
+
+        <tbody>
+            @foreach (var email in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => email.Id)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => email.From)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => email.To)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => email.Subject)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => email.Body)
+                    </td>
+                    <td>
+                        <a asp-action="Details" asp-route-id="@email.Id">Details</a> |
+                    </td>
+                </tr>
+            }
+        </tbody>
+</div>*@

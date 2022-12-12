@@ -1,0 +1,65 @@
+﻿@model ClarityAssesmentEmail.Models.Email
+
+@{
+    ViewData["Title"] = "Sent";
+}
+
+<h1>Sent</h1>
+
+
+@*<p>
+    <a asp-action="Create">Compose Email</a>
+</p>*@
+<div class="text-center">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model=> model.Sender)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model=> model.Recipient)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model=> model.Subject)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model=> model.Body)
+                </th>
+            </tr>
+
+        </thead>
+    <tbody>
+@*<ul>
+@foreach (var email in Model ){            
+         
+         <li>
+            <p>
+                @email.Sender
+            </p>
+            <p>
+                @email.
+            </p>
+            <p>
+                @email.Subject
+            </p>
+            <p>
+                @email.Body
+            </p>
+
+         </li>
+
+}
+</ul>*@
+         
+    </tbody>
+    </table>
+
+</div>
+
+
+<div>
+
+    <a asp-action="SendEmail">Compose New |</a>
+    <a asp-action="Index">|Go Home</a>
+</div>
