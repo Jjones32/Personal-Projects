@@ -21,9 +21,6 @@ public partial class EmailDbContext : DbContext
             entity.Property(e => e.Body);
             entity.Property(e => e.Date);
 
-
-
-
         });
     }
 

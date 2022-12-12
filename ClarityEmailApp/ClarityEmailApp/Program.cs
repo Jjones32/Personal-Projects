@@ -20,23 +20,6 @@ internal class Program
         builder.Services.AddScoped<IEmailService, EmailService>();
         builder.Services.AddDbContext<EmailDbContext>(x => x.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-/*
-        Console.WriteLine("Connection established");
-        //Create
-        Console.WriteLine("Enter Sender Email Address");
-        string sender = Console.ReadLine();
-
-        Console.WriteLine("Enter Recipient Email Address");
-        string recipient = Console.ReadLine();
-
-        Console.WriteLine("Enter Subject:");
-        string subject = Console.ReadLine();
-
-        Console.WriteLine("Enter Body:");
-        string body = Console.ReadLine();*/
-
-
-
         var app = builder.Build();
 
         // Configure the HTTP request pipeline.
